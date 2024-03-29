@@ -1,5 +1,3 @@
-// HomePage.js
-
 import React from "react";
 import styled from "styled-components";
 import Navbar from "./NavbarFiles/Navbar";
@@ -10,7 +8,6 @@ import Projects from "./ProjectFiles/Project";
 import Experience from "./ExperienceFiles/Experience";
 import Contact from "./ContactFiles/Contact";
 
-// import { Parallax, Pa } from "@react-spring/parallax";
 const Home = styled.div`
   width: 80%;
   height: 100% !important;
