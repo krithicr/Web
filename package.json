@@ -29,7 +29,8 @@
     "sass": "^1.72.0",
     "styled-components": "^6.1.8",
     "tachyons-components": "latest",
-    "typewriter-effect": "^2.21.0"
+    "typewriter-effect": "^2.21.0",
+    "@emotion/styled":"11.11.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

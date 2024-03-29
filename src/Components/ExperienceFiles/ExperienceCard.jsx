@@ -144,7 +144,6 @@ const Skill = styled.div`
 `;
 
 const ExperienceCard = ({ experience, inView }) => {
-  console.log(inView);
   return (
     <Card
       style={{
@@ -169,7 +168,7 @@ const ExperienceCard = ({ experience, inView }) => {
               <b>Skills:</b>
               <ItemWrapper>
                 {experience?.skills?.map((skill, index) => (
-                  <Skill>• {skill}</Skill>
+                  <Skill key={index}>• {skill}</Skill>
                 ))}
               </ItemWrapper>
             </Skills>

@@ -10,7 +10,6 @@ import {
   ButtonContainer,
   MobileIcon,
   MobileMenu,
-  MobileNavLogo,
   MobileLink,
 } from "./NavbarStyles";
 import { DiCssdeck } from "react-icons/di";
@@ -30,7 +29,7 @@ const Navbar = () => {
               display: "flex",
               alignItems: "center",
               color: "white",
-              marginBottom: "20;",
+              marginBottom: "20",
               cursor: "pointer",
             }}>
             <DiCssdeck size="3rem" style={{ color: "rgb(1, 129, 245)" }} />{" "}

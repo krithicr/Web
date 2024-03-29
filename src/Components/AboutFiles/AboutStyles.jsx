@@ -6,7 +6,7 @@ export const HeroContainer = styled.div`
   min-height: 100vh;
   // background: ${({ theme }) => theme.card_light};
   background-image: url(${backgroundImage});
-  background-size: contain;
+  background-size: cover;
   margin-top: -10px;
   background-position: center;
   display: flex;
