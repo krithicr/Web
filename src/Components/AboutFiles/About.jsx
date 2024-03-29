@@ -1,9 +1,6 @@
 import React from "react";
-
-// import HeroBgAnimation from "../HeroBgAnimation";
 import {
   HeroContainer,
-  HeroBg,
   HeroLeftContainer,
   HeroRightContainer,
   HeroInnerContainer,
