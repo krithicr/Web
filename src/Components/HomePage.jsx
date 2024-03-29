@@ -9,7 +9,7 @@ import Footer from "./FooterFiles/Footer";
 import Projects from "./ProjectFiles/Project";
 import Experience from "./ExperienceFiles/Experience";
 import Contact from "./ContactFiles/Contact";
-import land from "../../src/Images/land.png";
+
 // import { Parallax, Pa } from "@react-spring/parallax";
 const Home = styled.div`
   width: 80%;

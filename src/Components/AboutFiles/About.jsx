@@ -1,21 +1,16 @@
 import React from "react";
-import HeroImg from "../../Images/portfolio-pic1.jpg";
-import Land from "../../Images/land.png";
 
 // import HeroBgAnimation from "../HeroBgAnimation";
 import {
   HeroContainer,
   HeroBg,
   HeroLeftContainer,
-  Img,
   HeroRightContainer,
   HeroInnerContainer,
   TextLoop,
   Title,
   Span,
   SubTitle,
-  SocialMediaIcons,
-  SocialMediaIcon,
   ResumeButton,
 } from "./AboutStyles";
 

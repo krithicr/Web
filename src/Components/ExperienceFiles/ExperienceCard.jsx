@@ -1,5 +1,5 @@
 import React from "react";
-import { useInView } from "react-intersection-observer";
+
 import styled from "styled-components";
 
 const Document = styled.img`
