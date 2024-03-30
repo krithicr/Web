@@ -25,7 +25,7 @@ const Projects = ({ openModal, setOpenModal }) => {
       properties: [
         {
           startValue: 1,
-          endValue: 1.111,
+          endValue: 1.2,
           property: "scale",
         },
       ],
