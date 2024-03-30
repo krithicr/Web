@@ -284,7 +284,7 @@ export const projects = [
     description:
       "Developed a user-friendly movie ticket booking website using Next.js and Node.js, allowing users to browse and select seats effortlessly.Enhanced the user experience by implementing intuitive seat selection functionality, simplifying the ticket booking process",
     image:
-      "https://github.com/georgesimos/readme-assets/blob/master/cinema-plus/admin-movies.png",
+      "https://raw.githubusercontent.com/georgesimos/readme-assets/master/cinema-plus/admin-movies.png",
     tags: ["React Js", "Node Js", "Express Js"],
     category: "web app",
     github: "",
@@ -297,7 +297,7 @@ export const projects = [
     description:
       " This project is a mobile app that provides users with online course details such as reviews, ratings, and personalized recommendations.The app utilizes collaborative filtering in machine learning models to suggest related courses. Additionally, I Dockerized and deployed it on AWS Elastic Beanstalk",
     image:
-      "https://github.com/rishavchanda/Brain-Tumor-Detection/raw/main/Readme_resource/Image2.png",
+      "https://raw.githubusercontent.com/YixiaoHong/Smart-Course-Picker-Web-app/master/others/step1.png",
     tags: ["React", "AWS(ElasticBeanStalk)"],
     // category: "machine learning",
     github: "",
