@@ -25,7 +25,7 @@ const About = () => {
         {
           startValue: 1, // Start value for the opacity property (fully visible)
           endValue: 0, // End value for the opacity property (fully transparent)
-          property: "opacity", // Apply opacity transition
+          property: "opacity",
         },
       ],
     },

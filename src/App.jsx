@@ -10,11 +10,11 @@ function wait(time) {
   });
 }
 
-// const HomePage = lazy(() =>
-//   wait(2000).then(() => import("./Components/HomePage"))
-// );
+const HomePage = lazy(() =>
+  wait(1000).then(() => import("./Components/HomePage"))
+);
 
-const HomePage = lazy(() => import("./Components/HomePage"));
+// const HomePage = lazy(() => import("./Components/HomePage"));
 
 const MainApp = styled.div`
   background-color: ${({ theme }) => theme.bg};
