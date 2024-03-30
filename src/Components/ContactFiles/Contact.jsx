@@ -137,6 +137,11 @@ const ContactButton = styled.input`
   color: ${({ theme }) => theme.text_primary};
   font-size: 18px;
   font-weight: 600;
+  opacity: 0.5;
+  &:hover {
+    transition: all 0.6s ease-in-out;
+    opacity: 1;
+  }
 `;
 
 const Contact = () => {
