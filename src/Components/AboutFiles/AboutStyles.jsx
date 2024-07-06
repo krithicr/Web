@@ -6,6 +6,7 @@ export const HeroContainer = styled.div`
   min-height: 100vh;
   // background: ${({ theme }) => theme.card_light};
   background-image: url(${backgroundImage});
+  box-shadow: 20px 20px 60px #1f2634, -20px -20px 60px #1f2634;
   background-size: cover;
   margin-top: -10px;
   background-position: center;
@@ -187,7 +188,7 @@ export const SubTitle = styled.div`
   font-size: 18px;
   line-height: 32px;
   margin-bottom: 42px;
-  color: ${({ theme }) => theme.text_primary + 95};
+  color: ${({ theme }) => theme.text_primary};
 
   @media (max-width: 960px) {
     text-align: center;

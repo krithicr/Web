@@ -18,6 +18,7 @@ const HomePage = lazy(() =>
 
 const MainApp = styled.div`
   background-color: ${({ theme }) => theme.bg};
+
   width: 100%;
   // height: 100vh;
   text-align: center;
