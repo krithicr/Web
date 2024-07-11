@@ -6,7 +6,7 @@ export const HeroContainer = styled.div`
   min-height: 100vh;
   // background: ${({ theme }) => theme.card_light};
   background-image: url(${backgroundImage});
-  box-shadow: 20px 20px 60px #1f2634, -20px -20px 60px #1f2634;
+  box-shadow: inset 0px 0px 50px 50px #191924;
   background-size: cover;
   margin-top: -10px;
   background-position: center;
@@ -24,19 +24,26 @@ export const HeroContainer = styled.div`
     padding: 66px 16px;
   }
   @media (max-width: 640px) {
+    margin: 0px;
+    min-width: 330px;
+    // left: -20px;
+    // width: 100%;
+    // align-items: center;
+    justify-content: center;
+    box-shadow: inset 0px 0px 0px 0px #191924;
     background-repeat: no-repeat;
-    background-size: 300px 280px;
-
+    background-size: 400px 300px;
     background-position: top;
     padding: 32px 0px;
   }
   z-index: 1;
 
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
+  // clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
 `;
 
 export const HeroBg = styled.div`
   position: absolute;
+  opacity: 0.4;
   display: flex;
   justify-content: end;
   top: 0;
@@ -52,7 +59,6 @@ export const HeroBg = styled.div`
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-
   @media (max-width: 960px) {
     justify-content: center;
     padding: 0 0px;
@@ -64,6 +70,7 @@ export const HeroInnerContainer = styled.div`
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-evenly;
+  // top: 18%;
   align-items: center;
   width: 100%;
   max-width: 1100px;
@@ -75,6 +82,7 @@ export const HeroInnerContainer = styled.div`
 export const HeroLeftContainer = styled.div`
   width: 100%;
   order: 1;
+  opacity: 1;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -94,6 +102,8 @@ export const HeroLeftContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    top: 10%;
   }
 `;
 
@@ -156,9 +166,11 @@ export const Title = styled.div`
   }
 
   @media (max-width: 640px) {
-    font-size: 40px;
+    position: relative;
+    font-size: 30px;
     line-height: 48px;
-    margin-bottom: 8px;
+    margin-bottom: 2px;
+    top: -40px;
   }
 `;
 
@@ -173,9 +185,11 @@ export const TextLoop = styled.div`
     text-align: center;
   }
   @media (max-width: 640px) {
+    position: relative;
     font-size: 22px;
-    line-height: 48px;
-    margin-bottom: 16px;
+    line-height: 20px;
+    margin-bottom: 5px;
+    top: -40px;
   }
 `;
 
@@ -198,6 +212,8 @@ export const SubTitle = styled.div`
     width: 100%;
     font-size: 16px;
     line-height: 32px;
+    position: relative;
+    top: -20px;
   }
 `;
 
@@ -225,17 +241,25 @@ export const ResumeButton = styled.a`
     // background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
     box-shadow:  20px 20px 60px #1F2634,
     -20px -20px 60px #1F2634;
+
+
     &:hover {
-        transform: scale(1.05);
+    transform: scale(1.05);
     transition: all 0.4s ease-in-out;
     box-shadow:  20px 20px 60px #1F2634,
     filter: brightness(1);
-    }    
+    }
+    
+     &.active {
+    background-color: #3224b0; 
+    color: #fff; 
+  }
     
     
     @media (max-width: 640px) {
         padding: 12px 0;
         font-size: 18px;
+        
     } 
 
 `;

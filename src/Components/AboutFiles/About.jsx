@@ -31,44 +31,44 @@ const About = () => {
     },
   ];
   return (
-    <div id="about">
-      <Plx className="MyAwesomeParallax" parallaxData={parallaxData}>
-        <HeroContainer>
-          {/* <HeroBg>
+    // <div style={{ width: "100%" }}>
+    <Plx className="MyAwesomeParallax" parallaxData={parallaxData}>
+      <HeroContainer id="about">
+        {/* <HeroBg>
           <HeroBgAnimation />
         </HeroBg> */}
-          <HeroInnerContainer>
-            <HeroLeftContainer id="Left">
-              <Title>Hi, I am {Bio.name}</Title>
-              <TextLoop>
-                a
-                <Span>
-                  <Typewriter
-                    options={{
-                      strings: Bio.roles,
-                      autoStart: true,
-                      loop: true,
-                    }}
-                  />
-                </Span>
-              </TextLoop>
-              <SubTitle>{Bio.description}</SubTitle>
-              <ResumeButton href={Bio.resume} target="display">
-                Check Resume
-              </ResumeButton>
-            </HeroLeftContainer>
+        <HeroInnerContainer>
+          <HeroLeftContainer id="Left">
+            <Title>Hi, I am {Bio.name}</Title>
+            <TextLoop>
+              a
+              <Span>
+                <Typewriter
+                  options={{
+                    strings: Bio.roles,
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </Span>
+            </TextLoop>
+            <SubTitle>{Bio.description}</SubTitle>
+            <ResumeButton href={Bio.resume} target="display">
+              Check Resume
+            </ResumeButton>
+          </HeroLeftContainer>
 
-            <HeroRightContainer id="Right">
-              {/* <Img
+          <HeroRightContainer id="Right">
+            {/* <Img
               src={Land}
               alt="hero-image"
               style={{ backgroundColor: "black" }}
             /> */}
-            </HeroRightContainer>
-          </HeroInnerContainer>
-        </HeroContainer>
-      </Plx>
-    </div>
+          </HeroRightContainer>
+        </HeroInnerContainer>
+      </HeroContainer>
+    </Plx>
+    // </div>
   );
 };
 
