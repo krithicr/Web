@@ -1,8 +1,9 @@
-import React from "react";
+import * as React from "react";
 import styled from "styled-components";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { Snackbar } from "@mui/material";
+import { Alert, Snackbar } from "@mui/material";
+import validator from "validator";
 
 const Container = styled.div`
   display: flex;
@@ -146,27 +147,41 @@ const ContactButton = styled.input`
 
 const Contact = () => {
   //hooks
-  const [open, setOpen] = React.useState(false);
+  const [openSuccess, setOpenSuccess] = React.useState(false);
+  const [openFailure, setOpenFailure] = React.useState(false);
+  const [email, setEmail] = React.useState();
+
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_qsz3dju",
-        "template_2zkhwdh",
-        form.current,
-        "k0hfgxs8VpQLXE4gA"
-      )
-      .then(
-        (result) => {
-          setOpen(true);
-          form.current.reset();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    if (validator.isEmail(email)) {
+      emailjs
+        .sendForm(
+          "service_qsz3dju",
+          "template_2zkhwdh",
+          form.current,
+          "k0hfgxs8VpQLXE4gA"
+        )
+        .then(
+          (result) => {
+            setOpenSuccess(true);
+            form.current.reset();
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    } else {
+      setOpenFailure(true);
+      form.current.reset();
+    }
+  };
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpenSuccess(false);
   };
 
   return (
@@ -176,18 +191,35 @@ const Contact = () => {
         <Desc>Feel free to reach out to me</Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           {/* <ContactTitle>Email Me </ContactTitle> */}
-          <ContactInput placeholder="Your Email" name="from_email" />
+          <ContactInput
+            placeholder="Your Email"
+            name="from_email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
           <ContactInput placeholder="Your Name" name="from_name" />
           <ContactInput placeholder="Subject" name="subject" />
           <ContactInputMessage placeholder="Message" rows="4" name="message" />
           <ContactButton type="submit" value="Send" />
         </ContactForm>
         <Snackbar
-          open={open}
+          open={openSuccess}
+          autoHideDuration={4000}
+          onClose={handleClose}
+        >
+          <Alert
+            onClose={handleClose}
+            severity="success"
+            variant="filled"
+            sx={{ width: "100%" }}
+          >
+            Email sent Succesfully!
+          </Alert>
+        </Snackbar>
+        <Snackbar
+          open={openFailure}
           autoHideDuration={6000}
-          onClose={() => setOpen(false)}
-          message="Email sent successfully!"
-          severity="success"
+          onClose={() => setOpenFailure(false)}
+          message="Enter a valid Email address!"
         />
       </Wrapper>
     </Container>
